@@ -1,6 +1,6 @@
 <?php
 
-    $dsn="mysql:host=localhost;charset=utf8;dbname=mypolling";
+    $dsn="mysql:host=localhost;charset=utf8;dbname=vote";
     // $dsn data source name
     // 連結資料庫
     $pdo=new PDO($dsn,'root','');
@@ -8,16 +8,27 @@
     session_start();
 
     //取得符合條件的一筆資料
+
+    $sql='0';
+    $id=array('1','333','555','tttt');
     function find($table,$id){
+        // 把pdo變成全域變數
         global $pdo;
         $sql="SELECT *FROM `$table` WHERE ";
+        // 語法SELECT * FROM `table` WHERE `id`='23' AND `name`='mack';
 
+        // 如果id是陣列
         if(is_array($id)){
+            // 用迴圈把$id為array的資料撈出
             foreach($id as $key=>$value){
+                // 佔存在tmp中
                 $tmp[]="`$key`='$value'";
             }
-            
+                // ( [0] => `0`='111' ) Array ( [0] => `0`='111' [1] => `1`='222' ) }
+// 將陣列變成字串
             $sql=$sql. implode(" AND ",$tmp);
+            echo $sql;
+            // $sql="SELECT *FROM `$table` WHERE "=  "SELECT *FROM `$table` WHERE `0`='111' AND `1`='222' 
         }else{
            $sql=$sql . "`id`='$id'";
         }
