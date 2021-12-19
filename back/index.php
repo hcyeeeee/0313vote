@@ -31,20 +31,15 @@
 </div>    
 <?php
 
-// 用do 什麼來做事情
-// 如果有就用$do
-// 如果沒有就用file
 $do=(isset($_GET['do']))?$_GET['do']:'list';
-// 加入檔案(不要打.ＰＨＰ)
-$file="./front/".$do.".php";
-// check檔案是否存在
+$file=$do.".php";
 if(file_exists($file)){
     include $file;
 }else{
     include "list.php";
 }
 ?>
-<div class="p-3 text-center text-light bg-info fixed-bottom">我好笨</div>
+<div class="p-3 text-center text-light bg-primary fixed-bottom">mack版權所有、歡迎盜用</div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
