@@ -34,7 +34,7 @@ $div= -->
                 </h5>
 
                 <p class="card-text">77777</p>
-                <input action="../front/vote.php" class="btn btn-info" type="button" value="投票"></input>
+               <a href='index.php?do=vote'><input  class="btn btn-info" type="button" value="看結果"></input></a>
                 <input action="../front/vote_result.php" class="btn btn-info" type="button" value="看結果"></input>
             </div>
         </div>
