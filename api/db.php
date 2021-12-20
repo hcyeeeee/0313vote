@@ -67,7 +67,7 @@ function all($table,...$arg){
             $sql=$sql.$arg[0];
         }
     }
-    echo $sql;
+    // echo $sql;
 
     if(isset($arg[1])){
         $sql=$sql.$arg[1];

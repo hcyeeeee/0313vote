@@ -1,7 +1,4 @@
-
 <!-- // 要如何加一個問題就增加一個表？？？？？
-
-
 
 // echo"666";
 // 裡面要用單引號
@@ -18,105 +15,44 @@
 
 $div= -->
 
+<!-- $k = find('topics', '1'); -->
+<!-- $title = print_r($key['topic']); -->
 
 
+<? 
 
-<div class="container d-flex justify-content-around">
+$subject= all('topics');
+echo"<ol>";
+foreach($subject as $key => $value){
+//     echo "<il>";
+//     echo "<a href='index.php?do=vote&id={$value['id']}'>";
+//     echo $value['topic'];
+//     echo "</a>";
+//     echo "</li>";  
+// echo"<ol>";                             
+?>
+
     <!-- 問題一   -->
     <div class="row ">
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="./img/IMG_9232.JPG" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">
-                    <? $key = find('topics', '1');
-                       $value = print_r($key['topic']);
-                       $value?>
+                    <?echo $value['topic'];?>
                 </h5>
-
                 <p class="card-text">77777</p>
-               <a href='index.php?do=vote'><input  class="btn btn-info" type="button" value="看結果"></input></a>
-                <input action="../front/vote_result.php" class="btn btn-info" type="button" value="看結果"></input>
+                <a href="index.php?do=vote&id=<?echo $value['id'];?>"><input class="btn btn-info" type="button"
+                        value="投票"></input></a>
+                <a href="index.php?do=vote_result&id=<?echo $value['id'];?>"><input class="btn btn-info" type="button"
+                        value="看結果"></input></a>
             </div>
         </div>
     </div>
-
-    <!-- 問題二 -->
-    <div class="row">
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="./img/IMG_9232.JPG" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">
-                    <? $key = find('topics', '2');
-                       $value = print_r($key['topic']);
-                       $value?>
-
-                </h5>
-
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                    the card's content.</p>
-
-
-                <!-- 怎麼按到別業。。。 -->
-                <form action="../front/vote.php" method="post">
-                    <input class="btn btn-info" type="button" value="投票"></input>
-                    <input class="btn btn-info" type="button" value="看結果"></input>
-                </form>
-            </div>
-        </div>
-    </div>
-
-<!-- 問題3 -->
-    <div class="row">
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="./img/IMG_9232.JPG" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">
-                    <? $key = find('topics', '3');
-                       $value = print_r($key['topic']);
-                       $value?>
-
-                </h5>
-
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                    the card's content.</p>
-
-
-                <!-- 怎麼按到別業。。。 -->
-                <form action="../front/vote.php" method="post">
-                    <input class="btn btn-info" type="button" value="投票"></input>
-                    <input class="btn btn-info" type="button" value="看結果"></input>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- 問題4 -->
-    <div class="row">
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="./img/IMG_9232.JPG" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">
-                    <? $key = find('topics', '5');
-                       $value = print_r($key['topic']);
-                       $value?>
-
-                </h5>
-
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                    the card's content.</p>
-
-
-                <!-- 怎麼按到別業。。。 -->
-                <form action="../front/vote.php" method="post">
-                    <input class="btn btn-info" type="button" value="投票"></input>
-                    <input class="btn btn-info" type="button" value="看結果"></input>
-                </form>
-            </div>
-        </div>
-    </div>
-
-
-
 
 
 </div>
+
+<?php
+
+}  
+?>
