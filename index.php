@@ -1,3 +1,5 @@
+<?php include_once "./api/db.php";?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,17 +16,17 @@
 </head>
 <body>
 
-<div class="jumbotron">
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
+<div class="jumbotron p-0" style= "overflow:hidden;height:200px">
+<div id="carouselExampleSlidesOnly" class="carousel slide position-relative" data-ride="carousel">
+  <div class="carousel-inner position-absolute" style="top:-300px;">
     <div class="carousel-item active">
-      <img class="d-block w-100" src=".../800x400?auto=yes&bg=777&fg=555&text=First slide" alt="First slide">
+      <img class="d-block w-100 " src="./img/IMG_9232.JPG" alt="First slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src=".../800x400?auto=yes&bg=666&fg=444&text=Second slide" alt="Second slide">
+      <img class="d-block w-100" src="./img/IMG_9232.JPG" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src=".../800x400?auto=yes&bg=555&fg=333&text=Third slide" alt="Third slide">
+      <img class="d-block w-100" src="./img/IMG_9233.JPG" alt="Third slide">
     </div>
   </div>
 </div>
@@ -41,7 +43,7 @@ $file="./front/".$do.".php";
 if(file_exists($file)){
     include $file;
 }else{
-    include "list.php";
+    include "./front/list.php";
 }
 ?>
 <div class="p-3 text-center text-light bg-info fixed-bottom">我好笨</div>

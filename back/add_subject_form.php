@@ -3,7 +3,7 @@
 
 <!-- 用bootstrap做表單 -->
 
-<form action="api/save_vote.php" method="post">
+<form action="api/edit_subject.php" method="post">
 
 <div class="container col-6">
     <div class="row">

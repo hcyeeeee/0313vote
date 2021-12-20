@@ -9,8 +9,10 @@
 
     //取得符合條件的一筆資料
 
-    $sql='0';
-    $id=array('1','333','555','tttt');
+    // $sql='0';
+    // $id=array('1','333','555','tttt');
+
+
     function find($table,$id){
         // 把pdo變成全域變數
         global $pdo;
@@ -65,6 +67,7 @@ function all($table,...$arg){
             $sql=$sql.$arg[0];
         }
     }
+    echo $sql;
 
     if(isset($arg[1])){
         $sql=$sql.$arg[1];
@@ -148,10 +151,13 @@ function q($sql){
 
 }
 
-
+// dd全名direction dump 印出來
  function dd($array){
      echo "<pre>";
      print_r($array);
      echo "</pre>";
  }
+
+
+
 ?>
