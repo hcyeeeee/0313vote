@@ -37,7 +37,9 @@ foreach($subject as $key => $value){
 ?>
 
    
-        <div class="card col" style="width: 18rem;">
+        <div class="card col ml-3" style="width: 18rem;">
+
+        <!-- 如何用回圈放圖片。。。。 -->
             <img class="card-img-top" src="./img/bear.jpeg" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">
