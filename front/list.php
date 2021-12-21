@@ -40,13 +40,13 @@ foreach($subject as $key => $value){
         <div class="card col ml-3" style="width: 18rem;">
 
         <!-- 如何用回圈放圖片。。。。 -->
-            <img class="card-img-top" src="./img/bear.jpeg" alt="Card image cap">
+            <img class="card-img-top" src="./img/<?echo $value['img'];?>.jpeg" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">
-                    <?echo $value['topic'];?>
+                    <?echo "主題：". $value['topic'];?>
                 </h5>
                 <p class="card-text"> 
-                     <?echo $value['subtitle'];?>
+                     <?echo  $value['subtitle'];?>
                     </p>
                 <a href="index.php?do=vote&id=<?echo $value['id'];?>"><input class="btn btn-info" type="button"
                         value="投票"></input></a>

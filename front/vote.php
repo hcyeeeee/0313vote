@@ -13,7 +13,12 @@ $options=all('options',['topic_id'=>$id]);
   <div class="row d-flex flex-column">
 
 <form action="./api/save_vote.php" method="post">
-<h1 class="col fs-1"><?=$subject['topic'];?></h1>
+
+
+<h1 class="col fs-1">
+  <img class="card-img-top" src="./img/<?echo $subject['img'];?>.jpeg" style="width: 50px; height:50px;" alt="Card image cap">
+<?=$subject['topic'];?>
+</h1>
 
 
 <?php
@@ -33,7 +38,7 @@ echo "</li>";
 
 
 ?>
-
+ 
 <input type="submit" value="投票">
 </form>
 </div>
