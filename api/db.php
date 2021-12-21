@@ -27,16 +27,36 @@
                 $tmp[]="`$key`='$value'";
             }
                 // ( [0] => `0`='111' ) Array ( [0] => `0`='111' [1] => `1`='222' ) }
-// 將陣列變成字串
+            // 將陣列變成字串
             $sql=$sql. implode(" AND ",$tmp);
-            echo $sql;
+            // echo $sql;
             // $sql="SELECT *FROM `$table` WHERE "=  "SELECT *FROM `$table` WHERE `0`='111' AND `1`='222' 
         }else{
            $sql=$sql . "`id`='$id'";
         }
-
         return $pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
     }
+
+
+
+// // 計算符合條件的資料有幾筆。
+//     function rows($table,$array){
+//         global $pdo;
+//         $sql="SELECT count(*)FROM `$table` WHERE ";
+       
+     
+//             foreach($array as $key=>$value){
+//                 // 佔存在tmp中
+//                 $tmp[]="`$key`='$value'";
+//             }
+//             $sql=$sql. implode(" AND ",$tmp);
+//                 //fetch column 僅回傳value   
+//         return $pdo->query($sql)->fetchcolumn(PDO::FETCH_ASSOC);
+//     }
+//      echo rows('options',['topic_id'=>5]);
+
+
+
 
     //計算符合條件的資料筆數
     function rows($table,$array){
@@ -50,7 +70,7 @@
         return $pdo->query($sql)->fetchColumn();
     }
 
-
+// echo rows('options',['topic_id'=>5]);
 
     //取出指定資料表的所有資料
 function all($table,...$arg){
@@ -61,20 +81,17 @@ function all($table,...$arg){
             foreach($arg[0] as $key=>$value){
                 $tmp[]="`$key`='$value'";
             }
-            
             $sql=$sql."where " . implode(" AND ",$tmp);
         }else{
             $sql=$sql.$arg[0];
         }
     }
     // echo $sql;
-
     if(isset($arg[1])){
         $sql=$sql.$arg[1];
     }
     
     //echo $sql;
-    
     $rows=$pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
     return $rows;
     //return $pdo->query($sql)->fetchAll();

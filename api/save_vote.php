@@ -13,8 +13,11 @@ $opt=find("options",$opt_id);
 $opt['count']=$opt['count']+1;
 
 //使用update自訂函式來更新選項紀錄
+//更新成count+1
+// 條件是id=>傳來得id
 update('options',['count'=>$opt['count']],['id'=>$opt_id]);
-
 
 //完成投票紀錄，導向回投票結果頁並帶上主題的id
 to("../index.php?do=vote_result&id={$opt['topic_id']}");
+// header("location:../index.php?do=vote_result&id={$opt['topic']}");
+?>

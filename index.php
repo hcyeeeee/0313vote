@@ -17,8 +17,10 @@
 <body>
 
 <div class="jumbotron p-0" style= "overflow:hidden;height:200px">
+
 <div id="carouselExampleSlidesOnly" class="carousel slide position-relative" data-ride="carousel">
   <div class="carousel-inner position-absolute" style="top:-300px;">
+  
     <div class="carousel-item active">
       <img class="d-block w-100 " src="./img/IMG_9232.JPG" alt="First slide">
     </div>
@@ -31,6 +33,7 @@
   </div>
 </div>
 </div>    
+</div>
 <?php
 
 // 用do 什麼來做事情
@@ -45,6 +48,7 @@ if(file_exists($file)){
 }else{
     include "./front/list.php";
 }
+
 ?>
 <div class="p-3 text-center text-light bg-info fixed-bottom">我好笨</div>
 

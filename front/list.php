@@ -1,4 +1,4 @@
-<!-- // 要如何加一個問題就增加一個表？？？？？
+<!-- //
 
 // echo"666";
 // 裡面要用單引號
@@ -18,23 +18,26 @@ $div= -->
 <!-- $k = find('topics', '1'); -->
 <!-- $title = print_r($key['topic']); -->
 
-
+<div class="container">
+  <div class="row">
 <? 
 
 $subject= all('topics');
-echo"<ol>";
+// echo"<ol>";
 foreach($subject as $key => $value){
+    // 有數量的資料才撈出
+    // 1 or >1=true
+    if(rows('options',['topic_id'=>$value['id']])>0){
 //     echo "<il>";
 //     echo "<a href='index.php?do=vote&id={$value['id']}'>";
-//     echo $value['topic'];
+//     echo $value['topic'];ㄋ
 //     echo "</a>";
 //     echo "</li>";  
 // echo"<ol>";                             
 ?>
 
-    <!-- 問題一   -->
-    <div class="row ">
-        <div class="card" style="width: 18rem;">
+   
+        <div class="card col" style="width: 18rem;">
             <img class="card-img-top" src="./img/IMG_9232.JPG" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">
@@ -47,12 +50,13 @@ foreach($subject as $key => $value){
                         value="看結果"></input></a>
             </div>
         </div>
-    </div>
 
 
-</div>
+
 
 <?php
-
+    }
 }  
 ?>
+  </div>
+</div>
