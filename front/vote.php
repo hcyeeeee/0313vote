@@ -14,17 +14,23 @@ $options=all('options',['topic_id'=>$id]);
 
 <form action="./api/save_vote.php" method="post">
 <h1 class="col fs-1"><?=$subject['topic'];?></h1>
+
+
 <?php
 // 如果沒按顯示error
 
+
+
+
 foreach($options as $key => $opt){
-echo '<li class=" col list-group-item list-group-item-action">';
+echo '<li class=" col list-group-item list-group-item-action" >';
 // value 要知在資料表這個選縣id多少
 echo "<input type='radio' name='opt' value='{$opt['id']}'>";
 echo $opt['opt'];
 echo "</li>";
 
 }
+
 
 ?>
 

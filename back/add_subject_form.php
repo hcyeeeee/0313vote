@@ -1,25 +1,5 @@
-
-<body>
-
-<!-- 用bootstrap做表單 -->
-
-<form action="api/edit_subject.php" method="post">
-
-<div class="container col-6">
-    <div class="row">
-        <div class="col">
-            問題一：
-        </div>
-        <div class="col">
-            今天要吃什麼？
-        </div>
-      
-    </div>
-</div>
+<h1 class="text-center font-weight-bold">新增問卷</h1>
+<form action="../api/new_subject.php" method='post' class='col-6 m-auto'>
+    <label>問卷主題: <input type="text" name="subject"></label>
+<div><input type="submit" value="送出"></div>
 </form>
-
-
-
-
-</body>
-</html>

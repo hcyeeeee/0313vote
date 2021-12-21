@@ -22,7 +22,7 @@
   <div class="carousel-inner position-absolute" style="top:-300px;">
   
     <div class="carousel-item active">
-      <img class="d-block w-100 " src="./img/IMG_9232.JPG" alt="First slide">
+      <img class="d-block w-100 " src="./img/monkey.jpeg" alt="First slide">
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" src="./img/IMG_9232.JPG" alt="Second slide">
@@ -34,6 +34,9 @@
 </div>
 </div>    
 </div>
+
+
+
 <?php
 
 // 用do 什麼來做事情

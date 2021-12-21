@@ -38,12 +38,14 @@ foreach($subject as $key => $value){
 
    
         <div class="card col" style="width: 18rem;">
-            <img class="card-img-top" src="./img/IMG_9232.JPG" alt="Card image cap">
+            <img class="card-img-top" src="./img/bear.jpeg" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">
                     <?echo $value['topic'];?>
                 </h5>
-                <p class="card-text">77777</p>
+                <p class="card-text"> 
+                     <?echo $value['subtitle'];?>
+                    </p>
                 <a href="index.php?do=vote&id=<?echo $value['id'];?>"><input class="btn btn-info" type="button"
                         value="投票"></input></a>
                 <a href="index.php?do=vote_result&id=<?echo $value['id'];?>"><input class="btn btn-info" type="button"
