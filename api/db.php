@@ -5,6 +5,10 @@
     // 連結資料庫
     $pdo=new PDO($dsn,'root','');
 
+     // 連結220資料庫
+    // $dsn="mysql:host=localhost;charset=utf8;dbname=s1100426";
+    // $pdo=new PDO($dsn,'s1100426','s1100426');
+
     session_start();
 
     //取得符合條件的一筆資料

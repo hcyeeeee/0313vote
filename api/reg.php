@@ -5,7 +5,8 @@ include_once "db.php";
 
 insert('users',$_POST);
 
-// 資料傳不上去
+// dd($_POST);
+
 //新增完畢導向回首頁
 // alert註冊成功！！！
 
