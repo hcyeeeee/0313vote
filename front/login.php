@@ -1,5 +1,4 @@
 
-<h1>登入頁</h1>
 <h2 class='text-center font-weight-bold'>會員登入</h2>
 
 <form action="./api/check_login.php" method="post">
@@ -14,8 +13,8 @@
     </tr>
     <tr>
         <td colspan="2">
-            <input type="submit" value="登入">
-            <input type="reset" value="重罝">
+            <input class="btn btn-info " type="submit" value="登入">
+            <input class=" btn btn-info " type="reset" value="重罝">
         </td>
 
     </tr>

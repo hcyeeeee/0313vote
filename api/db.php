@@ -40,24 +40,6 @@
 
 
 // // 計算符合條件的資料有幾筆。
-//     function rows($table,$array){
-//         global $pdo;
-//         $sql="SELECT count(*)FROM `$table` WHERE ";
-       
-     
-//             foreach($array as $key=>$value){
-//                 // 佔存在tmp中
-//                 $tmp[]="`$key`='$value'";
-//             }
-//             $sql=$sql. implode(" AND ",$tmp);
-//                 //fetch column 僅回傳value   
-//         return $pdo->query($sql)->fetchcolumn(PDO::FETCH_ASSOC);
-//     }
-//      echo rows('options',['topic_id'=>5]);
-
-
-
-
     //計算符合條件的資料筆數
     function rows($table,$array){
         global $pdo;
@@ -96,9 +78,9 @@ function all($table,...$arg){
     return $rows;
     //return $pdo->query($sql)->fetchAll();
 
-    echo "<pre>";
-    print_r(all('options'));
-    echo "</pre>";
+    // echo "<pre>";
+    // print_r(all('options'));
+    // echo "</pre>";
     
 
 
@@ -122,17 +104,18 @@ function all($table,...$arg){
 
     mb_substr($sql_where,0,mb_strlen($sql_where)-5);
     $sql="UPDATE `$table` SET $sql_set WHERE $sql_where ";
-    echo $sql . "<br>";
+    // echo $sql . "<br>";
     $pdo->exec($sql);
 
  }
 
 
+ 
+
+
  function insert($table,$array){
      global $pdo;
-
-
-     $sql="INSERT into $table(`" . implode('`,`',array_keys($array)) . "`) 
+     $sql="INSERT INTO $table(`" . implode('`,`',array_keys($array)) . "`) 
                         value('" . implode("','",$array) ."')";
 
     echo $sql."<br>";
@@ -176,9 +159,9 @@ function q($sql){
  }
 
  
- function alert($msg) {
-     echo "<script type='text/javascript'>alert('$msg');</script>";
- }
+//  function alert($msg) {
+//      echo "<script type='text/javascript'>alert('$msg');</script>";
+//  }
 
 
 

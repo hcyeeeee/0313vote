@@ -22,39 +22,33 @@
 
     </style>
 </head>
-<body>
+<body >
 
-<div class="jumbotron p-0 mb-0"  style="overflow:hidden;height:250px">
-<a href="index.php">
-<div id="carouselExampleSlidesOnly" class="carousel slide  position-relative" data-ride="carousel">
-  <div class="carousel-inner position-absolute" style="top:-250px">
-  <?php 
-    $images=all('ad',['sh'=>1]);
 
-    foreach($images as $key => $image){
-      if($key==0){
-        echo "<div class='carousel-item active'>";
-      }else{
-        echo "<div class='carousel-item'>";
-      }
+<nav class="navbar navbar-light bg-warning">
 
-      echo "  <img class='d-block w-100' src='../image/{$image['name']}' alt='{$image['intro']}'>";
-      echo "</div>";
+  
+      <p class="display-4 text-dark">投票系統</p>
+
+
+      <form class="form-inline">
+        <button class="btn btn-outline-info btn-lg" type="button ">登入</button>
+        &nbsp &nbsp
+        <button class="btn btn-outline-info btn-lg" type="button">註冊</button>
+
+      </form>
+
+  
+  </nav>
+ 
       
-
-    }
-
-
-  ?>
-  </div>
-</div>
-</a>
+ 
 </div>
 <nav class='bg-light shadow py-3 px-2 d-flex justify-content-between mb-4'>
 <div>
   <a class='px-2' href="?do=show_vote_list">問卷管理</a>
   <a class='px-2' href="?do=member">會員管理</a>
-  <a class='px-2' href="?do=ad">廣告管理</a>  
+  <a class='px-2' href="?do=ad">圖片管理</a>  
 
 
 </div>
@@ -73,7 +67,7 @@ if(isset($_SESSION['user'])){
 </nav>
 
 
-<div class="container">
+<div class="container p-3">
 <?php
 
 $do=(isset($_GET['do']))?$_GET['do']:'list_manege';

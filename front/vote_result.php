@@ -7,13 +7,20 @@ $sql="select *
             `topics`.`id`='{$_GET['id']}'";
 
 $rows=q($sql);
+$id=$_GET['id'];
+$subject=find('topics',$id);
 ?>
 
+
 <div class="container ">
-<div class="row d-flex flex-column ml-5 mr-5">
-<h1>
+<div class="row">
+  
+<h1 class="col fs-1">
+    <img class="card-img" src="./img/<?echo $subject['img'];?>.jpeg" style="width: 50px; height:50px;" alt="Card image cap">
     <?=$rows[0]['topic'];?>
 </h1>
+</div>
+
 
 <div class="list-group  " style="font-size:1.2rem">
     <?php
@@ -26,11 +33,11 @@ $rows=q($sql);
     }
 
 ?>
-
+</div>
 </div>
 <a href="index.php"><input type="button" value="回首頁"></a>
 </div>
 </div>
-</div>
 
+</div>
 
