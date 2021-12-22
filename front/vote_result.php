@@ -16,8 +16,8 @@ $subject=find('topics',$id);
 <div class="row">
   
 <h1 class="col fs-1">
-    <img class="card-img" src="./img/<?echo $subject['img'];?>.jpeg" style="width: 50px; height:50px;" alt="Card image cap">
-    <?=$rows[0]['topic'];?>
+    <img class="card-img" src="./img/<?php echo $subject['img'];?>.jpeg" style="width: 50px; height:50px;" alt="Card image cap">
+    <?php echo $rows[0]['topic'];?>
 </h1>
 </div>
 

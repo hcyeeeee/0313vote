@@ -20,7 +20,7 @@ $div= -->
 
 <div class="container">
   <div class="row">
-<? 
+<?php 
 
 $subject= all('topics');
 // echo"<ol>";
@@ -39,20 +39,19 @@ foreach($subject as $key => $value){
    
         <div class="card col ml-3" style="width: 18rem;">
 
-
-            <img class="card-img-top" src="./img/<?echo $value['img'];?>.jpeg" alt="Card image cap">
+            <img class="card-img-top" src="./img/<?php echo $value['img'];?>.jpeg" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">
-                    <?echo "主題：". $value['topic'];?>
+                    <?php echo "主題：". $value['topic'];?>
                 </h5>
                 <p class="card-text"> 
-                     <?echo  $value['subtitle'];?>
+                     <?php echo  $value['subtitle'];?>
                     </p>
 
-                <a href="index.php?do=vote&id=<?echo $value['id'];?>"><input class="btn btn-info " type="button"
+                <a href="index.php?do=vote&id=<?php echo$value['id'];?>"><input class="btn btn-info " type="button"
                         value="投票"></input></a>
                         
-                <a href="index.php?do=vote_result&id=<?echo $value['id'];?>"><input class="btn btn-info " type="button"
+                <a href="index.php?do=vote_result&id=<?php echo $value['id'];?>"><input class="btn btn-info " type="button"
                         value="結果"></input></a>
                        
             </div>

@@ -16,8 +16,8 @@ $options=all('options',['topic_id'=>$id]);
 
 
 <h1 class="col fs-1">
-  <img class="card-img-top" src="./img/<?echo $subject['img'];?>.jpeg" style="width: 50px; height:50px;" alt="Card image cap">
-<?=$subject['topic'];?>
+  <img class="card-img-top" src="./img/<?php echo $subject['img'];?>.jpeg" style="width: 50px; height:50px;" alt="Card image cap">
+<?php echo $subject['topic'];?>
 </h1>
 
 

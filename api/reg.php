@@ -9,7 +9,7 @@ insert('users',$_POST);
 //新增完畢導向回首頁
 // alert註冊成功！！！
 
-// to("../index.php?do=login");
+to("../index.php?do=login");
 
 // ?>
 
