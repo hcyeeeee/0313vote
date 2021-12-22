@@ -18,70 +18,65 @@
 
 <body>
 
-  <!-- <div class="jumbotron p-0" style= "overflow:hidden;height:200px">
 
-<div id="carouselExampleSlidesOnly" class="carousel slide position-relative" data-ride="carousel">
-  <div class="carousel-inner position-absolute" style="top:-300px;">
-  
-    <div class="carousel-item active">
-      <img class="d-block w-100 " src="./img/monkey.jpeg" alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="./img/IMG_9232.JPG" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="./img/IMG_9233.JPG" alt="Third slide">
-    </div>
-  </div>
-</div>
-</div>    
-</div> -->
-
-
+<!-- 標題 -->
 <nav class="navbar navbar-light bg-warning">
   <div class="container">
-  
     <p class="display-4 text-dark">投票系統</p>
+    <!-- error -->
+     <?php
+     if(isset($_SESSION['error'])){
+     echo "<span class='text-danger'>".$_SESSION['error']."</span>";
+     }
 
+     //判斷是否有登入的紀錄，根據登入狀況，顯示不同的功能按鈕
+     if(isset($_SESSION['user'])){
+     echo "<span class='pr-5'>歡迎！{$_SESSION['user']}</span>";
+     ?>
+       <div>
+       <a class="btn btn-sm btn-primary mx-1" href="logout.php">登出</a>
+      </div>
 
-      <form class="form-inline">
-        <button class="btn btn-outline-info btn-lg" type="button ">登入</button>
-        &nbsp &nbsp
-        <button class="btn btn-outline-info btn-lg" type="button">註冊</button>
+     <?php
+     }else{
+     ?>
+      <!-- 登入＆註冊 -->
+     <form class="form-inline">
+     <a href="?do=login" class="btn btn-outline-info btn-lg">登入</a>
+      &nbsp &nbsp
+        <a href="?do=reg"><button class="btn btn-outline-info btn-lg" type="button">註冊</button></a>
+</form>
 
-      </form>
+     <?php
+     }
+     ?>
 
-
-      
   </div>
-  
-  </nav>
- 
+</nav>
 
 
+ <!-- 中間的頁面 -->
   <div class="container mt-5 auto">
-    
+
     <?php
-
-// 用do 什麼來做事情
-// 如果有就用$do
-// 如果沒有就用file
-$do=(isset($_GET['do']))?$_GET['do']:'list';
-// 加入檔案(不要打.ＰＨＰ)
-$file="./front/".$do.".php";
-// check檔案是否存在
-if(file_exists($file)){
+   // 如果有就用$do如果沒有就用file
+   $do = (isset($_GET['do'])) ? $_GET['do'] : 'list';
+   // 加入檔案(不要打.ＰＨＰ)
+   $file = "./front/" . $do . ".php";
+   // check檔案是否存在
+   if (file_exists($file)) {
     include $file;
-}else{
+   } else {
     include "./front/list.php";
-}
+   }
+   ?>
+   </div>
+   <br><br>
 
-?>
-    <div class="p-3 text-center text-dark bg-info fixed-bottom">我好笨</div>
-  </div>
-  </div>
-  <!-- <div class="p-3 text-center text-dark bg-info fixed-bottom">我好笨</div> -->
+   <!-- footer -->
+   <div class="p-3 text-center text-dark fixed-bottom bg-warning ">我好笨</div>
 
+ 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -91,6 +86,6 @@ if(file_exists($file)){
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
     integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
-</body>
 
+  </body>
 </html>
