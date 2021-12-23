@@ -40,4 +40,3 @@ $subject=find('topics',$id);
 </div>
 
 </div>
-

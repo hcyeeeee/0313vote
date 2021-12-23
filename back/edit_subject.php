@@ -2,6 +2,7 @@
 
 $subject=find('topics',$_GET['id']);
 $options=all('options',['topic_id'=>$_GET['id']]);
+$del=del('img',$_GET['id']);
 
 ?>
 <form action="../api/edit_subject.php" method='post' class='col-6 m-auto'>
@@ -12,7 +13,13 @@ $options=all('options',['topic_id'=>$_GET['id']]);
     <a href="../api/add_option.php?id=<?=$subject['id'];?>">
         <input class='bg-info border-info text-light rounded' type="button" value="+">
     </a>
+
+    <a href="../api/del_option.php?id=<?=$subject['id'];?>">
+        <input class='bg-info border-info text-light rounded' type="button" value="-">
+    </a>
     
+    
+   
     <?php 
     foreach($options as $key => $opt){
         echo "<label class='list-group-item'>\n";
@@ -21,7 +28,8 @@ $options=all('options',['topic_id'=>$_GET['id']]);
         echo   "<input type='hidden' name='opt_id[]' value='{$opt['id']}'>\n";
         echo "</label>\n";
     }
-
     ?>
+
+
 <input type="submit" value="送出">
 </form>

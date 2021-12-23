@@ -33,7 +33,7 @@
     <div>
       <a class='px-2' href="?do=list">問卷管理</a>
       <a class='px-2' href="?do=member">會員管理</a>
-      <a class='px-2' href="?do=image">圖片管理</a>
+      <a class='px-2' href="?do=ad">圖片管理</a>
 
 
     </div>

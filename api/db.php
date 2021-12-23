@@ -141,8 +141,11 @@ function all($table,...$arg){
     }else{
        $sql=$sql . "`id`='$id'";
     }
+//   echo $sql."<br>";
     return $pdo->exec($sql);
  }
+
+
 
 function to($url){
     header("location:".$url);

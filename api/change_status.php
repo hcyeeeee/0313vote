@@ -15,6 +15,6 @@ $img['sh']=($img['sh']+1)%2;
 update('ad',['sh'=>$img['sh']],['id'=>$img['id']]);
 
 //資料表更新完成，將頁面導向原本的廣告管理頁面
-to("../backend/?do=ad");
+to("../back/?do=ad");
 
 ?>

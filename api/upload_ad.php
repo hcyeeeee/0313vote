@@ -13,7 +13,7 @@ if(!empty($_FILES['name']['tmp_name'])){
     $filename=$_FILES['name']['name'];
 
     //將檔案從暫存路徑搬移至指定路徑
-    move_uploaded_file($_FILES['name']['tmp_name'],'../image/'.$filename);
+    move_uploaded_file($_FILES['name']['tmp_name'],'./img/'.$filename);
 
     //使用insert自訂函式來完成新增廣告圖片的動作
     insert('ad',['name'=>$filename,'sh'=>0,'intro'=>$intro]);
@@ -21,7 +21,7 @@ if(!empty($_FILES['name']['tmp_name'])){
 }
 
 //新增完畢，導向回廣告管理頁面
-to("../backend/?do=ad");
+to("../back/?do=ad");
 
 
 
