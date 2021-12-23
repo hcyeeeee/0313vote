@@ -16,35 +16,60 @@
   <title>問卷系統</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
     integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+   <style>
+    .navbar{
+background: darkgoldenrod;
+}
+.p-3{
+background: darkgoldenrod;}
 
+
+.btn-info{
+  background:#855600;
+  background:#d2b38c;
+  border:none;
+}
+
+.ss{
+  background: wheat;
+}
+.display-4{
+  color:wheat;
+}
+.px-2{
+  font-size:20px;
+ 
+}
+
+</style>
 </head>
 
 <body>
 
 
-  <nav class="navbar navbar-light bg-warning">
-    <p class="display-4 text-dark">投票系統</p>
+  <nav class="navbar navbar-light ">
+    <p class="display-4 ml-2">投票系統</p>
   </nav>
 
 
 
   </div>
-  <nav class='bg-light shadow py-3 px-2 d-flex justify-content-between mb-4'>
+  <nav class='ss  py-3 px-2 d-flex justify-content-between mb-4'>
     <div>
-      <a class='px-2' href="?do=list">問卷管理</a>
-      <a class='px-2' href="?do=member">會員管理</a>
-      <a class='px-2' href="?do=ad">圖片管理</a>
+      <a class='px-2 btn btn-info' href="?do=list">問卷管理</a>
+      <a class='px-2 btn btn-info' href="?do=member">會員管理</a>
+      <a class='px-2 btn btn-info' href="?do=ad">圖片管理</a>
 
 
     </div>
     <?php 
 
      if(isset($_SESSION['user'])){
-  echo "<span class='pr-5'>歡迎！{$_SESSION['user']}</span>";
+  echo "<span class='pr-5 text-dark' style='font-size:26px '>welcome！{$_SESSION['user']}</span>";
     ?>
 
     <div>
-      <a class="btn btn-sm btn-primary mx-1" href="../logout.php">登出</a>
+      <a class="btn btn-info mx-1" href="../logout.php">登出</a>
     </div>
     
     <?php
@@ -54,7 +79,7 @@
   </nav>
 
 
-  <div class="container p-3">
+  <div class="container ">
     <?php
 
     $do=(isset($_GET['do']))?$_GET['do']:'list_manege';
@@ -67,7 +92,7 @@
 ?>
 <br><br><br>
  <!-- footer -->
- <div class="p-3 text-center text-dark fixed-bottom bg-warning ">我好笨</div>
+ <div class="p-3 text-center text-light fixed-bottom  ">我好笨</div>
 
  
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

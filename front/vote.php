@@ -25,6 +25,8 @@ $options=all('options',['topic_id'=>$id]);
            echo '<li class="list-group-item" >';
            // value 要知在資料表這個選縣id多少
            echo "<input type='radio' name='opt' value='{$opt['id']}'>";
+           echo "&nbsp";
+           echo "&nbsp";
            echo $opt['opt'];
            echo "</li>";}
            ?>

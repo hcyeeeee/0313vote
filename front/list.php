@@ -91,22 +91,21 @@ foreach ($subject as $key => $value) {
 ?>
 
 
-
+<!-- 
 
 <div class="col-3">
         <div class="card col ml-3 mb-4 mt-0" style="width: 18rem;">
             <div class="row mr-1 ml-1">
-                <!-- 圖片 -->
+                
                 <img class="card-img-top mt-3 " src="./img/<?php echo $value['img']; ?>.jpeg" alt="Card image cap">
             </div>
-            <!-- 主題 -->
+            
             <div class="row">
                 <div class="card-body ">
                   
                 <a href="./index.php?do=add_subject_form"><input
                                 class="btn btn-info btn-sm col" type="button" value="新增問卷"></input></a>
-                    <!-- <a href= "../index.php?do=add_subject_form"><input class="btn btn-info " type="button" value="新增問卷"></input></a>
-                  <br> -->
+                  
                   <br>
                   <br>
                   <br>
@@ -117,5 +116,5 @@ foreach ($subject as $key => $value) {
 
     </div>
 
-</div>
+</div> -->
 </div>

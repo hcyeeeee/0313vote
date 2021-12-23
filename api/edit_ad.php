@@ -16,6 +16,7 @@ if(!empty($_FILES['name']['tmp_name'])){
 //取得表單傳來的intro欄位資料
 $intro=$_POST['intro'];
 
+
 //根據是否有上傳檔片來決定要執行那一項更新指令
 if(isset($filename)){
     update('ad',['name'=>$filename,'intro'=>$intro],['id'=>$_POST['id']]);

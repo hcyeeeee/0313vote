@@ -11,8 +11,29 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <style>
 
+.navbar{
+background: darkgoldenrod;
+}
+.p-3{
+background: darkgoldenrod;
+}
+.btn-info{
+  background:#855600;
+  background:#d2b38c;
+  border:none;
+}
+
+.btn-outline-light:hover{
+  background: wheat;
+  border:white;
+  color:#855600;
+}
 
 
+.display-4{
+  border:20px black;
+  color:wheat;
+}
   </style>
 </head>
 
@@ -20,21 +41,21 @@
 
 
 <!-- 標題 -->
-<nav class="navbar navbar-light bg-warning">
-  <div class="container">
-    <p class="display-4 text-dark">投票系統</p>
+<nav class="navbar navbar-light  ">
+  <div class="container-fluid">
+    <p class="display-4 ">投票系統</p>
     <!-- error -->
      <?php
      if(isset($_SESSION['error'])){
-     echo "<span class='text-danger'>".$_SESSION['error']."</span>";
+     echo "<span class='text-danger'style='font-size:24px'>".$_SESSION['error']."</span>";
      }
 
      //判斷是否有登入的紀錄，根據登入狀況，顯示不同的功能按鈕
      if(isset($_SESSION['user'])){
-     echo "<span class='pr-5'>歡迎！{$_SESSION['user']}</span>";
+     echo "<span class=' mr-5 text-light ' style='font-size:26px'>welcome！{$_SESSION['user']}</span>";
      ?>
        <div>
-       <a class="btn btn-sm btn-primary mx-1" href="logout.php">登出</a>
+       <a class="btn btn-info mx-1" href="logout.php">登出</a>
       </div>
 
      <?php
@@ -42,9 +63,9 @@
      ?>
       <!-- 登入＆註冊 -->
      <form class="form-inline">
-     <a href="?do=login" class="btn btn-outline-info btn-lg">登入</a>
+     <a href="?do=login" class="btn btn-outline-light btn-lg">登入</a>
       &nbsp &nbsp
-        <a href="?do=reg"><button class="btn btn-outline-info btn-lg" type="button">註冊</button></a>
+        <a href="?do=reg"><button class="btn btn-outline-light btn-lg" type="button">註冊</button></a>
 </form>
 
      <?php
@@ -56,7 +77,7 @@
 
 
  <!-- 中間的頁面 -->
-  <div class="container mt-5 auto">
+  <div class="container mt-4 auto">
 
     <?php
    // 如果有就用$do如果沒有就用file
@@ -74,7 +95,7 @@
    <br><br>
 
    <!-- footer -->
-   <div class="p-3 text-center text-dark fixed-bottom bg-warning ">我好笨</div>
+   <div class="p-3 text-center text-light fixed-bottom  ">Copyright © 2021 by HCY</div>
 
  
  

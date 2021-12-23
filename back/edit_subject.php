@@ -5,17 +5,17 @@ $options=all('options',['topic_id'=>$_GET['id']]);
 $del=del('img',$_GET['id']);
 
 ?>
-<form action="../api/edit_subject.php" method='post' class='col-6 m-auto'>
+<form action="../api/edit_subject.php" method='post' class='col-6 form-control '>
     <label>問卷主題: <input type="text" name="topic" value='<?=$subject['topic'];?>'></label>
     <input type="hidden" name="topic_id" value="<?=$subject['id'];?>" >
     <!-- <button type="button">+</button> -->
     <!--增加選項-->
     <a href="../api/add_option.php?id=<?=$subject['id'];?>">
-        <input class='bg-info border-info text-light rounded' type="button" value="+">
+        <input class='bg-info border-info text-light rounded' type="button" value="新增">
     </a>
 
     <a href="../api/del_option.php?id=<?=$subject['id'];?>">
-        <input class='bg-info border-info text-light rounded' type="button" value="-">
+        <input class='bg-danger border-danger text-light rounded' type="button" value="重置">
     </a>
     
     

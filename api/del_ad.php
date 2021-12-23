@@ -10,5 +10,5 @@ unlink("../img/".$image['name']);
 del('ad',$_GET['id']);
 
 //刪除作業完畢，導向回廣告管理頁面
-// to('../back/?do=ad');
+to('../back/?do=ad');
 ?>

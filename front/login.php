@@ -12,11 +12,12 @@
         <td><input type="password" name="password"></td>
     </tr>
     <tr>
-        <td colspan="2">
-            <input class="btn btn-info " type="submit" value="登入">
+        
+        <td colspan="2 ml-5 ">
+            <input class="btn btn-info   " type="submit" value="登入">
             <input class=" btn btn-info " type="reset" value="重罝">
         </td>
-
+       
     </tr>
 </table>
 
