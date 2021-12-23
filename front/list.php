@@ -15,7 +15,7 @@
 
 <div class="container">
     <div class="row">
-        <?php
+    <?php
 
 $subject = all('topics');
 foreach ($subject as $key => $value) {
@@ -25,74 +25,97 @@ foreach ($subject as $key => $value) {
     
         if(isset($_SESSION['user'])){
            ?>
-            <div class="col-3">
-                <div class="card col ml-3 mb-4 mt-0" style="width: 18rem;">
-                    <div class="row mr-1 ml-1">
-                        <!-- 圖片 -->
-                        <img class="card-img-top mt-3 " src="./img/<?php echo $value['img']; ?>.jpeg" alt="Card image cap">
-                    </div>
-                    <!-- 主題 -->
-                    <div class="row">
-                        <div class="card-body ">
-                            <h5 class="card-title">
-                                <?php echo "主題：" . $value['topic']; ?>
-                            </h5>
-                            <!-- 副標題 -->
-                            <p class="card-text">
-                                <?php echo $value['subtitle']; ?>
-                            </p>
-                            <!-- 按鈕 -->
-                            <a href="index.php?do=vote&id=<?php echo $value['id']; ?>"><input class="btn btn-info "
-                                    type="button" value="投票"></input></a>
-    
-                            <a href="index.php?do=vote_result&id=<?php echo $value['id']; ?>"><input class="btn btn-info "
-                                    type="button" value="結果"></input></a>
-                        </div>
-                    </div>
+    <div class="col-3">
+        <div class="card col ml-3 mb-4 mt-0" style="width: 18rem;">
+            <div class="row mr-1 ml-1">
+                <!-- 圖片 -->
+                <img class="card-img-top mt-3 " src="./img/<?php echo $value['img']; ?>.jpeg" alt="Card image cap">
+            </div>
+            <!-- 主題 -->
+            <div class="row">
+                <div class="card-body ">
+                    <h5 class="card-title">
+                        <?php echo "主題：" . $value['topic']; ?>
+                    </h5>
+                    <!-- 副標題 -->
+                    <p class="card-text">
+                        <?php echo $value['subtitle']; ?>
+                    </p>
+                    <!-- 按鈕 -->
+                    <a href="index.php?do=vote&id=<?php echo $value['id']; ?>"><input class="btn btn-info "
+                            type="button" value="投票"></input></a>
+
+                    <a href="index.php?do=vote_result&id=<?php echo $value['id']; ?>"><input class="btn btn-info "
+                            type="button" value="結果"></input></a>
                 </div>
             </div>
-
-           <?php
+        </div>
+    </div>
+    <?php
         }else{
             ?>
 
-              <div class="col-3">
-                <div class="card col ml-3 mb-4 mt-0" style="width: 18rem;">
-                    <div class="row mr-1 ml-1">
-                        <!-- 圖片 -->
-                        <img class="card-img-top mt-3 " src="./img/<?php echo $value['img']; ?>.jpeg" alt="Card image cap">
-                    </div>
-                    <!-- 主題 -->
-                    <div class="row">
-                        <div class="card-body ">
-                            <h5 class="card-title">
-                                <?php echo "主題：" . $value['topic']; ?>
-                            </h5>
-                            <!-- 副標題 -->
-                            <p class="card-text">
-                                <?php echo $value['subtitle']; ?>
-                            </p>
-                            <!-- 按鈕 -->
-                                <a href="index.php?do=login"><input class="btn btn-info "
-                                    type="button" value="投票"></input></a>
-    
-                            <a href="index.php?do=vote_result&id=<?php echo $value['id']; ?>"><input class="btn btn-info "
-                                    type="button" value="結果"></input></a>
-                        </div>
-                    </div>
-                </div>
-          
+    <div class="col-3">
+        <div class="card col ml-3 mb-4 mt-0" style="width: 18rem;">
+            <div class="row mr-1 ml-1">
+                <!-- 圖片 -->
+                <img class="card-img-top mt-3 " src="./img/<?php echo $value['img']; ?>.jpeg" alt="Card image cap">
+            </div>
+            <!-- 主題 -->
+            <div class="row">
+                <div class="card-body ">
+                    <h5 class="card-title">
+                        <?php echo "主題：" . $value['topic']; ?>
+                    </h5>
+                    <!-- 副標題 -->
+                    <p class="card-text">
+                        <?php echo $value['subtitle']; ?>
+                    </p>
+                    <!-- 按鈕 -->
+                    <a href="index.php?do=login"><input class="btn btn-info " type="button" value="投票"></input></a>
 
+                    <a href="index.php?do=vote_result&id=<?php echo $value['id']; ?>"><input class="btn btn-info "
+                            type="button" value="結果"></input></a>
+                </div>
+            </div>
         </div>
 
 
+    </div>
 
 
-        <?php
+
+
+    <?php
         }
 }
 }
 ?>
 
+
+
+
+<div class="col-3">
+        <div class="card col ml-3 mb-4 mt-0" style="width: 18rem;">
+            <div class="row mr-1 ml-1">
+                <!-- 圖片 -->
+                <img class="card-img-top mt-3 " src="./img/<?php echo $value['img']; ?>.jpeg" alt="Card image cap">
+            </div>
+            <!-- 主題 -->
+            <div class="row">
+                <div class="card-body ">
+                  
+                    <a href="../index.php?do=add_subject_form"><input class="btn btn-info " type="button" value="新增問卷"></input></a>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                </div>
+            </div>
+        </div>
+
+
     </div>
+
+</div>
 </div>

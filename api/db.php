@@ -127,7 +127,7 @@ function all($table,...$arg){
 
  }
 
-
+//  INSERT INTO `topics` (`id`, `topic`, `subtitle`, `img`) VALUES (NULL, 'hi', '你好', 'find');
 
  function del($table,$id){
     global $pdo;
