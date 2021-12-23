@@ -37,9 +37,9 @@ echo "<td>{$row['gender']}</td>";
 echo "<td>{$row['birthday']}</td>";
 
 echo "<td>";
-echo "<a class='btn btn-info' href='?do=edit_ad&id={$row['id']}'>修改</a>";
+echo "<a class='btn btn-info' href='?do=edit_member&id={$row['id']}'>修改</a>";
 // echo "<button>重新上傳</button>";
-echo "<a class='btn btn-danger' href='../api/del_ad.php?id={$row['id']}'>刪除</a>";
+echo "<a class='btn btn-danger' href='../api/del_member.php?id={$row['id']}'>刪除</a>";
 "</td>";
  echo "</tr>";
 }
