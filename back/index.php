@@ -37,7 +37,7 @@ background: darkgoldenrod;}
   color:wheat;
 }
 .px-2{
-  font-size:20px;
+  font-size:16px;
  
 }
 

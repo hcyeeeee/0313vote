@@ -8,7 +8,9 @@ $sql="select *
 
 $rows=q($sql);
 $id=$_GET['id'];
+
 $subject=find('topics',$id);
+
 ?>
 
 
@@ -21,14 +23,22 @@ $subject=find('topics',$id);
    </h1>
    </div>
 
+ 
    
-   <div class="list-group mt-1 " style="font-size:1.2rem">
+   <div class="list-group mt-1 d-inlineblock " style="font-size:1.2rem">
     <?php
     foreach($rows as $row){
+       
         echo "<li class='list-group-item'>";
         echo "<span>{$row['opt']}</span>";
+        ?>
+        <div class="progress">
+  <div class="progress-bar" role="progressbar" style="width:<?php echo $row['count']?>%"  aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+        <?php
         echo "<span class='badge badge-info float-right'>{$row['count']}</span>";
         echo "</li>";
+        
     }
     ?>
     </div>
@@ -43,4 +53,3 @@ $subject=find('topics',$id);
 </div>
 
              
-

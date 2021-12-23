@@ -5,11 +5,16 @@ $options=all('options',['topic_id'=>$_GET['id']]);
 $del=del('img',$_GET['id']);
 
 ?>
-<form action="../api/edit_subject.php" method='post' class='col-6 form-control '>
+<div class="container">
+    <div class="row ">
+ 
+
+<form action="../api/edit_subject.php" method='post' class='m-auto'>
     <label>問卷主題: <input type="text" name="topic" value='<?=$subject['topic'];?>'></label>
     <input type="hidden" name="topic_id" value="<?=$subject['id'];?>" >
     <!-- <button type="button">+</button> -->
     <!--增加選項-->
+   
     <a href="../api/add_option.php?id=<?=$subject['id'];?>">
         <input class='bg-info border-info text-light rounded' type="button" value="新增">
     </a>
@@ -19,7 +24,8 @@ $del=del('img',$_GET['id']);
     </a>
     
     
-   
+    </div>
+    <div class="col m-auto" style="width:400px">
     <?php 
     foreach($options as $key => $opt){
         echo "<label class='list-group-item'>\n";
@@ -33,3 +39,5 @@ $del=del('img',$_GET['id']);
 
 <input type="submit" value="送出">
 </form>
+</div>
+</div>

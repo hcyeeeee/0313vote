@@ -1,4 +1,4 @@
-<div class="container ml-2">
+<div class="container">
     <div class="row">
         <?php
        
@@ -23,16 +23,20 @@ foreach($subject as $key => $value){
                     <p class="card-text">
                         <?php echo $value['subtitle'];?>
                     </p>
-                    <div class="col ">
+                    <!-- <div class="col "> -->
                         <a href="../index.php?do=vote_result&id=<?php echo $value['id'];?>"><input
-                                class="btn btn-info btn-sm col" type="button" value="看結果"></input></a>
+                                class="btn btn-info btn-sm  " type="button" value="看結果"></input></a>
                         <br>
-                        <br>
+                       
 
                         <!-- 管理題目 -->
-                        <a href="?do=edit_subject&id=<?php echo $value['id'];?>"><input class="btn btn-info btn-sm col"
+                        <a href="?do=edit_subject&id=<?php echo $value['id'];?>"><input class="btn btn-info btn-sm mt-2"
                                 type="button" value="新增選項"></input></a>
-                    </div>
+                                <!-- <br>
+                                <br>
+                                <a href="?do=del_subject&id=<?php echo $value['id'];?>"><input class="btn btn-info "
+                                type="button" value="刪除主題"></input></a> -->
+                    <!-- </div> -->
 
                     
                   
