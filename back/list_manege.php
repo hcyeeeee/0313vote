@@ -11,7 +11,7 @@ foreach($subject as $key => $value){
 
         <div class="card col-2" style="width: 18rem;">
             <div class="row mr-1 ml-1 mt-2">
-                <img class="card-img-top" src="../img/<?php echo $value['img'];?>.jpeg" alt="Card image cap">
+                <a href="?do=edit_ad&id=<?php echo $value['id'];?>"><img class="card-img-top" src="../img/<?php echo $value['img'];?>.jpeg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">
                         <?php echo $value['topic'];?>
@@ -29,6 +29,9 @@ foreach($subject as $key => $value){
                         <a href="?do=edit_subject&id=<?php echo $value['id'];?>"><input class="btn btn-info btn-sm col"
                                 type="button" value="管理題目"></input></a>
                     </div>
+
+                    
+                  
 
                 </div>
 

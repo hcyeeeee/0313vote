@@ -1,4 +1,4 @@
-<h2 class="text-center font-weight-bold">編輯圖片</h2>
+<h2 class="text-center font-weight-bold">上傳圖</h2>
 <?php
 $ad=find('ad',$_GET['id']);
 

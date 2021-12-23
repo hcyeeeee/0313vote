@@ -1,6 +1,6 @@
 
 <table class="table table-hover">
-<h2 class="text-center font-weight-bold">會員資料管理</h2>
+<!-- <h2 class="text-center font-weight-bold">會員資料管理</h2> -->
 
 <div class="col-md-9 m-auto ml-3 ">
 <h3 class="text-center">會員列表</h3>
@@ -46,7 +46,11 @@ echo "<a class='btn btn-danger' href='../api/del_member.php?id={$row['id']}'>刪
 
 
 
+
+
 ?>
 </table>
+
+
 </div>
 </div>

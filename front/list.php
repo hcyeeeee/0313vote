@@ -79,8 +79,6 @@ foreach ($subject as $key => $value) {
                 </div>
             </div>
         </div>
-
-
     </div>
 
 
@@ -105,8 +103,10 @@ foreach ($subject as $key => $value) {
             <div class="row">
                 <div class="card-body ">
                   
-                    <a href="../index.php?do=add_subject_form"><input class="btn btn-info " type="button" value="新增問卷"></input></a>
-                  <br>
+                <a href="./index.php?do=add_subject_form"><input
+                                class="btn btn-info btn-sm col" type="button" value="新增問卷"></input></a>
+                    <!-- <a href= "../index.php?do=add_subject_form"><input class="btn btn-info " type="button" value="新增問卷"></input></a>
+                  <br> -->
                   <br>
                   <br>
                   <br>

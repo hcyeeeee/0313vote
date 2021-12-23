@@ -10,7 +10,7 @@ if(!empty($_FILES['name']['tmp_name'])){
     $filename=$_FILES['name']['name'];
 
     //搬移上傳的圖片檔至指定的目錄下
-    move_uploaded_file($_FILES['name']['tmp_name'],'./image/'.$filename);
+    move_uploaded_file($_FILES['name']['tmp_name'],'../img/'.$filename);
 }
 
 //取得表單傳來的intro欄位資料
@@ -24,6 +24,6 @@ if(isset($filename)){
 }
 
 //更新完成，導向回廣告頁
-to("../back/?do=ad");
+to("../backend/?do=ad");
 
 ?>
