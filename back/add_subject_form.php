@@ -1,15 +1,15 @@
-<h1 class="text-center md-4 font-weight-bold">新增問卷</h1>
+<h1 class="text-center mt-3 font-weight-bold">新增問卷</h1>
 
 
-<div class="container">
+<div class="container mt-2">
 <div class="row">
-    <div class="col col-md-4 m-auto">
+    <div class="col col-md-2 m-auto " style="width:400px">
 <form action="../api/new_subject.php" method='post' >
-    <label>問卷主題: <input type="text" name="topic"></label>
+    <label>問卷主題: <input class="form-control" type="text" name="topic"></label>
     <br>
 
-    <label>主題描述: <input type="text" name="subtitle"></label>
-<div><input type="submit" value="送出"></div>
+    <label>主題描述: <input class="form-control" type="text" name="subtitle"></label>
+<div><input class="btn btn-info mt-2" type="submit" value="送出"></div>
 </div>
 
 </form>
