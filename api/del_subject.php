@@ -8,5 +8,5 @@ $topic=find('topics',$_GET['id']);
 del('topics',['topic'=>$_GET['id']]);
 
 //刪除作業完畢，導向回廣告管理頁面
-// to('../back/?do=list_manege');
+to('../back/?do=list_manege');
 ?>

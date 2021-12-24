@@ -15,15 +15,15 @@ $del=del('img',$_GET['id']);
            <input type="hidden" name="topic_id" value="<?=$subject['id'];?>" >
    
    
-           <a href="../api/add_option.php?id=<?=$subject['id'];?>">
-          <input class='btn btn-success  text-light rounded' type="button" value="新增選項">
+           <div class="row ">
+    <div class="col col">
+    <a href="../api/add_option.php?id=<?=$subject['id'];?>">
+          <input class='btn btn-info  text-light rounded' type="button" value="新增選項">
           </a>
          
-     
-    <a href="../api/del_option.php?id=<?=$subject['id'];?>">
-    <input class='btn btn-danger text-light rounded' type="button" value="重置">
-        <div>
     
+        <div>
+        </div>
     
           
           <?php 
@@ -37,12 +37,17 @@ $del=del('img',$_GET['id']);
         ?>
         
          </div>
-     
-
-
+         </div>
+         <div class="row ">
+<div class="col col-md">
     <input class="btn btn-info" type="submit" value="送出">
- 
-
+     
+    <a href="../api/del_option.php?id=<?=$subject['id'];?>">
+    <input class='btn btn-danger text-light rounded' type="button" value="重置">
+    </div>
+    </div>
+  
+        </div>
 
 
 </a>
