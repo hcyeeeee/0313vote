@@ -56,7 +56,7 @@ background: darkgoldenrod;}
   </div>
   <nav class='ss  py-3 px-2 d-flex justify-content-between mb-4'>
     <div>
-      <a class='px-2 btn btn-info' href="?do=list">問卷管理</a>
+      <a class='px-2 btn btn-info' href="?do=index2">問卷管理</a>
       <a class='px-2 btn btn-info' href="?do=member">會員管理</a>
       <a class='px-2 btn btn-info' href="?do=ad">圖片管理</a>
 

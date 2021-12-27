@@ -14,7 +14,7 @@ if(isset($filename)){
     update('ad',['intro'=>$intro],['id'=>$_POST['id']]);
 }
 
-//更新完成，導向回廣告頁
-to("../back/?do=member");
+
+to("../back/?do=member.php");
 
 ?>

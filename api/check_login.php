@@ -13,7 +13,7 @@ if(rows('users',$_POST)>0){
     $_SESSION['user']=$_POST['account'];
 
     //登入檢查完成，將頁面導回首頁
-    to("../index.php");
+    to("../index2.php");
 }else{
 
     //帳密錯誤時，在session中紀錄錯誤訊息
