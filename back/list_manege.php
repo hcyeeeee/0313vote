@@ -27,16 +27,17 @@ foreach($subject as $key => $value){
                         <a href="../index.php?do=vote_result&id=<?php echo $value['id'];?>"><input
                                 class="btn btn-info btn-md  " type="button" value="觀看結果"></input></a>
                         <br>
-                       
-
                         <!-- 管理題目 -->
-                        <a href="?do=edit_subject&id=<?php echo $value['id'];?>"><input class="btn btn-info btn-md mt-2"
-                                type="button" value="新增選項"></input></a>
-                                <!-- <br>
-                                <br>
-                                <a href="?do=del_subject&id=<?php echo $value['id'];?>"><input class="btn btn-info "
-                                type="button" value="刪除主題"></input></a> -->
-                    <!-- </div> -->
+                        <a href="?do=edit_subject&id=<?php echo $value['id'];?>">
+                        <input class="btn btn-info btn-md mt-2" type="button" value="新增選項"></input>
+                        </a>
+                              <br>
+                          <div class="mt-2">
+                        
+                        <a href="../api/del_subject.php?id=<?php echo $value['id'];?>">
+                        <input class="btn btn-dark " type="button" value="刪除主題"></input>
+                        </a> 
+                        </div>   
 
                     
                   

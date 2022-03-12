@@ -25,6 +25,6 @@ if(isset($filename)){
 }
 
 //更新完成，導向回廣告頁
-to("../backend/?do=ad");
+to("../back/?do=ad");
 
 ?>

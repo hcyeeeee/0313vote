@@ -41,7 +41,8 @@
    echo "<td>{$row['name']}</td>";
    echo "<td>{$row['intro']}</td>";
    echo "<td>";
-   echo "<a class='btn btn-danger ml-2' href='../api/edit_member.php?id={$row['id']}'>修改</a>";
+   
+   echo "<a class='btn btn-danger ml-2' href='?do=edit_ad&id={$row['id']}'>修改</a>";
     // echo "<button>重新上傳</button>";
     echo "<a class='btn btn-danger ml-2' href='../api/del_ad.php?id={$row['id']}'>刪除</a>";
     "</td>";

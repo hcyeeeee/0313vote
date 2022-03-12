@@ -11,7 +11,7 @@ $ad=find('ad',$_GET['id']);
 ?>
 <div class="col-md-3 m-auto">
     <img src="../img/<?=$ad['name'];?>" style='width:250px;border:3px solid black'>
-<form action="../api/upload_ad.php" method="post" enctype="multipart/form-data">
+<form action="../api/edit_ad.php" method="post" enctype="multipart/form-data">
 <br>
     <div class='custom-file mx-auto d-block mb-2'>
         <label for="upload" class='custom-file-label'><?=$ad['name'];?></label>

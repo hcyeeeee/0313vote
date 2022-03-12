@@ -5,7 +5,7 @@
     // 連結資料庫
     $pdo=new PDO($dsn,'root','');
 
-     // 連結220資料庫
+    //  連結220資料庫
     // $dsn="mysql:host=localhost;charset=utf8;dbname=s1100426";
     // $pdo=new PDO($dsn,'s1100426','s1100426');
 
@@ -141,7 +141,7 @@ function all($table,...$arg){
     }else{
        $sql=$sql . "`id`='$id'";
     }
-//   echo $sql."<br>";
+  echo $sql."<br>";
     return $pdo->exec($sql);
  }
 
